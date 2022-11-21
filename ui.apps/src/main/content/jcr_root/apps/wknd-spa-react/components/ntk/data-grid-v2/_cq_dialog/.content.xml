@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Configure Data Grid v2"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            
+            <container
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Container"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                        </items>
+                    </column>
+                </items>
+            </container>
+            <element
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Elements"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                    fieldDescription="Configure form elements with errorlocation,pattern,required attributes"
+                                    composite="{Boolean}true"
+                                    >
+                                <field
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        name="./element">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <input
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="InputId"
+                                                name="./inputId"/>
+                                        <required
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                value="{Boolean}true"
+                                                uncheckedValue="{Boolean}false"
+                                                fieldDescription="Select if element is required"
+                                                name="./required"
+                                                text="Required"
+                                                title="Required"/>
+                                        <errorLocation
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Error Location"
+                                                name="./errorLocation">
+
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <none
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Default"
+                                                        value="null"/>
+                                                <below
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Below"
+                                                        value="below"/>
+                                                <callout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Callout"
+                                                        value="callout"/>
+                                            </items>
+                                        </errorLocation>
+                                        <pattern
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldLabel="Pattern"
+                                                name="./pattern">
+
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <tel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Tel"
+                                                        value="tel"/>
+                                                <password
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Url"
+                                                        value="url"/>
+                                                <email
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Email"
+                                                        value="email"/>
+                                                <number
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Number"
+                                                        value="number"/>
+                                                <password
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Password"
+                                                        value="password"/>
+
+                                            </items>
+                                        </pattern>
+                                        <message
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="ErrorMessage"
+                                                name="./errorMessage"/>
+                                    </items>
+
+                                </field>
+
+                            </columns>
+                        </items>
+                    </column>
+                </items>
+            </element>
+        </items>
+    </content>
+</jcr:root>

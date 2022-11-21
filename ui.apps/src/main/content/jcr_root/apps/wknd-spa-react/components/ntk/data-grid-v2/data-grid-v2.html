@@ -1,0 +1,22 @@
+<sly data-sly-test="${wcmmode.edit}">
+  <div data-emptytext="DataGrid" class="cq-placeholder"></div>
+</sly>
+<div
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+  data-sly-use.list="com.adobe.aem.guides.wkndspa.react.core.models.AncestryFormContainerModel"
+>
+  <form class="form" id="sumit" action="Store" method="POST">
+    <input type="email" id="id1" />
+    <input type="email" id="id2" />
+    <input type="email" id="id3" />
+  </form>
+  <script src="https://www.ancestrycdn.com/ui/2.10.3/js/core.js"></script>
+  <script>
+      let elementList = JSON.parse('${list.fields @ context='scriptString'}');
+      let field = {
+      fields: elementList
+    };
+    ui.validator(document.getElementById("sumit"),field);
+  </script>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty = true}"></sly>
